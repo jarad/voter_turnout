@@ -4,7 +4,7 @@ library(ggplot2)
 library(maps)
 library(mapproj)
 
-d = read.csv("voter_turnout.csv", skip=1)
+d = read.csv("1980-2014 November General Election - Turnout Rates.csv", skip=1)
 d = rename(d, replace=c('X'                                 = 'State',
                         'Alphanumeric.State.Code'           = 'State_Code',
 #                        'VEP.Total.Ballots.Counted'         = 'Voter_Turnout',
