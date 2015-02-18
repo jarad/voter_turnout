@@ -12,3 +12,7 @@
 .Rproj.user
 
 *.Rproj
+
+# Shiny 
+/shinyapps
+
