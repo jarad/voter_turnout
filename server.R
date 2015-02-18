@@ -27,7 +27,7 @@ shinyServer(function(input,output) {
     selectInput("year", 
                 label    = "Year:", 
                 choices  = setNames(years, years), 
-                selected = 2012)
+                selected = 2014)
   })
   
   output$selectState = renderUI({ 
