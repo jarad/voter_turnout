@@ -10,6 +10,7 @@ d = rename(d, replace=c('X'                                 = 'State',
 #                        'VEP.Total.Ballots.Counted'         = 'Voter_Turnout',
                         'Total.Ballots.Counted'             = 'n_ballots',
                          'Voting.Eligible.Population..VEP.' = 'VEP'))
+d$Midterm = ifelse((d$Year %% 4)==0, "No", "Yes")
 
 d = d[-which(d$State=="United States (Excl. Louisiana)"),]
 
@@ -51,7 +52,7 @@ shinyServer(function(input,output) {
   
   # Voter turnout over time
   output$time_series = renderPlot({
-    g = ggplot(df(), aes(x=Year, y=voter_turnout, col=State))+geom_point()
+    g = ggplot(df(), aes(x=Year, y=voter_turnout, col=State, shape=Midterm))+geom_point()
     print(g)
   })
   
