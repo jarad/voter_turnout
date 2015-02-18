@@ -2,7 +2,7 @@ require(shiny)
 require(markdown)
 
 shinyUI(pageWithSidebar(
-  headerPanel("Voter turnout 1980-2012 (2014 soon)"),
+  headerPanel("Voter turnout 1980-2014"),
   sidebarPanel(
     conditionalPanel(
       condition='input.conditionedPanels==1',
